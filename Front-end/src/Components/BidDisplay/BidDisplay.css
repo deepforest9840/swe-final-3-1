@@ -1,0 +1,126 @@
+.biddisplay-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.biddisplay-image {
+  flex: 1; /* 1/4 part */
+  position: relative; /* Add position relative for absolute positioning of overlay */
+}
+
+.biddisplay-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+}
+
+.biddisplay-image:hover img {
+  cursor: zoom-in; /* Change cursor to zoom-in when hovering over the image */
+  transform: scale(1.4); /* Scale the image by 1.6 when hovering */
+  transform-origin: calc((100% - 1px) * 100%) calc((100% - 1px) * 100%); /* Adjust the origin point */
+  z-index: 1; /* Ensure the image is above other content */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Add transition for fade effect */
+}
+
+.biddisplay-image:hover .image-overlay {
+  opacity: 1; /* Show overlay when hovering */
+}
+
+.image-overlay i {
+  color: white; /* Color of the zoom icon */
+  font-size: 24px; /* Adjust size of the zoom icon */
+}
+
+.biddisplay-details {
+  flex: 3; /* 3/4 part */
+  padding-left: 20px; /* Add space between the image and details */
+}
+
+.biddisplay-details h3 {
+  margin-bottom: 10px;
+}
+
+.bidding-details {
+  margin-top: 20px;
+}
+
+.bidding-details p {
+  margin-bottom: 5px;
+}
+.bid-section{
+  margin-bottom: 15px;
+  
+ 
+}
+
+.bsi{
+  height: 40px;
+  width: 530px;
+  background-color: aquamarine;
+}
+.bsb{
+  height: 44px;
+  width: 130px;
+  background-color: brown;
+}
+.question-section{
+  margin-bottom: 15px;
+}
+
+.qsi{
+  height: 40px;
+  width: 530px;
+  background-color: chartreuse;
+}
+.qsb{
+  height: 44px;
+  width: 130px;
+  background-color: blue;
+}
+/* Styles for bid history box */
+.bid-history {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bid-history h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.bid-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bid-history th,
+.bid-history td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.bid-history th {
+  background-color: #f2f2f2;
+  color: #333;
+}
